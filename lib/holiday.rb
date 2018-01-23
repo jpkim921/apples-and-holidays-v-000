@@ -46,9 +46,12 @@ def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_arr
   # code here
   # remember to return the updated hash
   # holiday_hash[season.to_sym][holiday_name.to_sym] = supply_array
-  holiday_hash[season][holiday_name] = supply_array
+  # holiday_hash[season][holiday_name] = supply_array
+  # return holiday_hash
 
-  return holiday_hash
+  holiday_hash[season][holiday_name] = supply_array
+    holiday_hash
+  
 end
 
 p add_new_holiday_with_supplies(holiday_hash, "purple", "red", [2,3,4])
